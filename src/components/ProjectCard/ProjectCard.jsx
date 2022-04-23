@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+//styles
 import "./ProjectCard.css";
 
-function ProjectCard(props) {
-    const { projectData } = props;
+function ProjectCard({ projectData }) {
+    // const { projectData } = props;
     return (
         <div className="project-card">
-        <Link to="/project">
-        <img src={projectData.image}/>
-        <h3>{projectData.title}</h3>
-        </Link></div>
+            <Link to={`/project/${projectData.id}`}>
+                <img src={projectData.image} alt="the project"/>
+                <h3>{projectData.title}</h3>
+            </Link>
+        </div>
     );
 }
 
