@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-//Components
+// Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
-//Data
-import { allProjects } from "../data";
-
 function HomePage() {
-    const [projectList, setProjectList] = useState([]);
+  // State
+  const [projectList, setProjectList] = useState();
 
-    useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}projects`)
-        .then((results) => {
-            return results.json();
-        }).then((data) => {
-            setProjectList(data);
-        });
-        setProjectList(allProjects);
-    }, []);
+  // Actions
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}projects`)
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        setProjectList(data);
+      });
+  }, []);
 
-    return (
-        <div id="project-list">
-            {projectList.map((projectData) => {
-                return <ProjectCard key={`project-${projectData.id}`} projectData={projectData} />;
-            })}
-        </div>
-    );
+  if (!projectList) return <p>Loading projects...</p>;
+
+  return (
+    <div id="project-list">
+      {projectList.map((projectData) => {
+        return <ProjectCard key={projectData.id} {...{ projectData }} />;
+      })}
+    </div>
+  );
 }
-
 export default HomePage;
