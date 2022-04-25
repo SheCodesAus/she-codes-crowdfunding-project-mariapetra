@@ -11,12 +11,14 @@ import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 
+
 function App() {
   return (
     <Router>
     <div>
 
     <Routes>
+        <Route path="/" element={<Nav />} />
         <Route path="/project/:id" element={<ProjectPage />} />
         <Route path="/" element={<HomePage />} />
     </Routes>

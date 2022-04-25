@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import { allProjects } from "../data";
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 function HomePage() {
   // State
-  const [projectList, setProjectList] = useState();
+  const [projectList, setProjectList] = useState([]);
 
   // Actions
   useEffect(() => {
@@ -20,12 +20,11 @@ function HomePage() {
 
   if (!projectList) return <p>Loading projects...</p>;
 
-  return (
-    <div id="project-list">
-      {projectList.map((projectData) => {
-        return <ProjectCard key={projectData.id} {...{ projectData }} />;
-      })}
+  return (<div id="project-list">
+    {projectList.map((projectData, key) => {
+      return <ProjectCard key={key} projectData={projectData} />;
+    })}
     </div>
-  );
-}
+    );
+  }
 export default HomePage;
