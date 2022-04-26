@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { allProjects } from "../data";
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
+//components
+// import Nav from "./components/Nav/Nav";
 
 function HomePage() {
   // State
@@ -20,7 +22,9 @@ function HomePage() {
 
   if (!projectList) return <p>Loading projects...</p>;
 
-  return (<div id="project-list">
+  return (
+  <div id="project-list">
+    
     {projectList.map((projectData, key) => {
       return <ProjectCard key={key} projectData={projectData} />;
     })}

@@ -1,4 +1,5 @@
 .navBar button {
-    background: transparent;;
+    background: transparent;
     border: none;
+    display: flex;
   }
