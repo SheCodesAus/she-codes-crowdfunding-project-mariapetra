@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Logo from '../images/logo-final-jpg.jpg';
 
 
 //icons
@@ -21,28 +22,35 @@ function Nav() {
 
     return (
         <nav className="navBar">
-            <button onClick={handleToggle}>
-                {navbarOpen ? (
-                <MdClose style={{ color: "var(--secondary-color)", 
-                width: "30px", 
-                height: "30px" }} />
-            ) : (
-                <FiMenu style={{ color: "var(--secondary-color)", 
-                width: "30px", 
-                height: "30px" }} />
-            )}
-            </button>
-
-            <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-                <NavLink to="/"activeClassName="active-link"
-                onClick={() => closeMenu()}
-                exact>HomePage</NavLink>
-                <NavLink to="/login"activeClassName="active-link"
-                onClick={() => closeMenu()}
-                exact>Login</NavLink>
-            </ul>
             
+            <section>
+                <button onClick={handleToggle}>
+                    {navbarOpen ? (
+                    <MdClose 
+                    style={{ color: "var(--secondary-color)", 
+                    width: "30px", 
+                    height: "30px" }} />
+                ) : (
+                    <FiMenu 
+                    style={{ color: "var(--secondary-color)", 
+                    width: "30px", 
+                    height: "30px" }} />
+                )}
+                </button>     
+                <ul 
+                    className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+                    <Link to="/"activeClassName="active-link"
+                    onClick={() => closeMenu()}
+                    exact>HomePage</Link>
+                    <Link to="/login"activeClassName="active-link"
+                    onClick={() => closeMenu()}
+                    exact>Login</Link>
+            </ul>   
+            </section>
+              
         </nav>
+
+   
     );
 }
 

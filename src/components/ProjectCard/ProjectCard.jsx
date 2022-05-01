@@ -9,8 +9,15 @@ function ProjectCard({ projectData }) {
     return (
         <div className="project-card">
             <Link to={`/project/${projectData.id}`}>
-                <img src={projectData.image} alt="the project"/>
-                <h3>{projectData.title}</h3>
+                <section className="project-image">
+                    <img src={projectData.image} alt="the project"/>
+                </section>
+                <sub className="project-text">
+                    <h2>{projectData.title}</h2>
+                    <h3>{projectData.description}</h3>
+                    <h3>{projectData.owner}</h3>
+                </sub>
+                
             </Link>
         </div>
     );

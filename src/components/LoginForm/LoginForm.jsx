@@ -49,7 +49,8 @@ const handleSubmit = async (event) => {
     return (
         <form>
             <div>
-                <label htmlFor="username">Username: </label>
+                <label className="form-text" 
+                htmlFor="username">Username: </label>
                 <input
                 type="text"
                 id="username"
@@ -58,7 +59,8 @@ const handleSubmit = async (event) => {
                 />
             </div>
             <div>
-                <label htmlFor="password">Password: </label>
+                <label className="form-text" 
+                htmlFor="password">Password: </label>
                 <input
                 type="password"
                 id="password"

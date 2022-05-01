@@ -23,7 +23,12 @@ function HomePage() {
   if (!projectList) return <p>Loading projects...</p>;
 
   return (
+
+  
   <div id="project-list">
+      <section>
+    <h1>This is a test </h1>
+    </section>
     
     {projectList.map((projectData, key) => {
       return <ProjectCard key={key} projectData={projectData} />;
