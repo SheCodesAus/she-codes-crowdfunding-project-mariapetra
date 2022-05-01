@@ -1,5 +1,11 @@
+
 .navBar button {
-    background: transparent;
-    border: none;
-    display: flex;
+  background: transparent;
+  border: none;
+  display: none;
   }
+/* 
+.menuNav {
+  display: flex;
+  justify-content: flex-end;
+} */

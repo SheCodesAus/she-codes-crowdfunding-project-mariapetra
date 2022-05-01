@@ -26,12 +26,11 @@ function ProjectPage() {
 
     //normal state
     return (
-        // instead of <div> or you can use <> instead of React.Fragment
-        
+        // instead of <div> or you can use <> instead of React.Fragment 
         <>
         <div>
             <h2>{projectData.title}</h2>
-            <h3>Created by: <ProjectOwner owner={projectData.owner} /> on {projectData.created}</h3>
+            <h3>Created by: <ProjectOwner owner={projectData.owner} /> on {projectData.date_created}</h3>
         </div>
 
         <div>
@@ -50,8 +49,7 @@ function ProjectPage() {
                 );
             })}
             </ul>
-        </div>
-          
+        </div>          
         </>
     );
 }
