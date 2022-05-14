@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from '../images/logo-final-jpg.jpg';
+import Logo from '../images/final-logo-jpg-white-text.jpg';
 
 
 //icons
@@ -22,6 +22,7 @@ function Nav() {
 
     return (
         <nav className="navBar">
+        <img className="logo" src={Logo}></img>
             
             <section>
                 <button onClick={handleToggle}>
@@ -39,12 +40,20 @@ function Nav() {
                 </button>     
                 <ul 
                     className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-                    <Link to="/"activeClassName="active-link"
-                    onClick={() => closeMenu()}
-                    exact>HomePage</Link>
-                    <Link to="/login"activeClassName="active-link"
-                    onClick={() => closeMenu()}
-                    exact>Login</Link>
+                    <Link 
+                        to="/" 
+                        className="active-link" 
+                        onClick={() => closeMenu()}
+                    >
+                        HomePage
+                    </Link>
+                    <Link 
+                        to="/login"
+                        className="active-link"
+                        onClick={() => closeMenu()}
+                    >
+                        Login
+                    </Link>
             </ul>   
             </section>
               

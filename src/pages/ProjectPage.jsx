@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 //components
-import ProjectOwner from "../components/ProjectOwner/ProjectOwner";
+import UserDetail from "../components/ProjectOwner/ProjectOwner";
+import PledgeForm from "../components/PledgeForm/PledgeForm";
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({pledges: [] });
@@ -15,13 +16,14 @@ function ProjectPage() {
         })
         .then((data) => {
             setProjectData(data);
+            console.log(data)
         });
     }, [id]);
 
 
     //loading state
     if (!projectData) {
-    return <h3>Loading project ...</h3>;
+        return <h3>Loading project ...</h3>;
     }
 
     //normal state
@@ -30,7 +32,7 @@ function ProjectPage() {
         <>
         <div>
             <h2>{projectData.title}</h2>
-            <h3>Created by: <ProjectOwner owner={projectData.owner} /> on {projectData.date_created}</h3>
+            <h3>Created by: <UserDetail userId={projectData.owner} /> on {projectData.date_created}</h3>
         </div>
 
         <div>
@@ -44,11 +46,12 @@ function ProjectPage() {
             {projectData.pledges.map((pledgeData, key) => {
                 return (
                 <li>
-                    {pledgeData.time} from {pledgeData.supporter}
+                    {pledgeData.amount} from {pledgeData.supporter}
                 </li>
                 );
             })}
             </ul>
+            <PledgeForm projectId={id}/>
         </div>          
         </>
     );

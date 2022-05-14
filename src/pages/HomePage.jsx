@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { allProjects } from "../data";
+// import { allProjects } from "../data";
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 //components
-// import Nav from "./components/Nav/Nav";
+import HeroCarousel from "../components/Hero/HeroHome";
 
 function HomePage() {
   // State
@@ -27,8 +27,8 @@ function HomePage() {
   
   <div id="project-list">
       <section>
-    <h1>This is a test </h1>
-    </section>
+        {HeroCarousel}test
+      </section>
     
     {projectList.map((projectData, key) => {
       return <ProjectCard key={key} projectData={projectData} />;
