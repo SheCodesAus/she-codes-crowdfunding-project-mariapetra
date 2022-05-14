@@ -55,7 +55,9 @@ function ProjectPage() {
                     return (
                         
                             <li className="pledge-list">
-                                {pledgeData.amount} hours donated from {pledgeData.supporter} {pledgeData.comment}
+                                {pledgeData.amount} hours donated from {pledgeData.supporter} 
+                                
+                                <p>{pledgeData.comment}</p>
                              </li>
                     
                     );
