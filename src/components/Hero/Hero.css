@@ -1,4 +1,4 @@
-.head-text {
+/* .head-text {
     position: relative;
 }
 
@@ -10,7 +10,7 @@
     bottom: 1%;
     font-family: var(--hero-font);
     color: var(--hero-font);
-}
+} */
 
 .title-text {
     font-size: 70px;
@@ -25,6 +25,91 @@
       0 0 151px var(--bg-color);
 }
 
-.sub-text {
-    font-size: 20px;
+/* .sub-text {
+    font-size: 30px;
+} */
+
+/* body * {
+    color:                      hsla(210, 100%, 100%, 0.88)     !important;
+    background:                 hsla(210, 100%,  50%, 0.33)       !important;
+    outline:    0.25rem solid hsla(210, 100%, 100%, 0.50)     !important;
+}
+
+.debug-center {
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+} */
+
+.hero {
+    height: 500px;
+    width: 100%;
+    color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background:  url("../images/lgbtq.webp") no-repeat center;
+    /* linear-gradient(to top, var(--bg-color), var(--bg-light), var(--bg-mid)), */
+    text-align: center;
+    align-items: space-between;
+}
+
+.hero-highlight {
+    font-family: var(--highlight-text);
+    font-size: 80px;
+    text-shadow: var(--hero-highlight);
+}
+
+/* .qr-code-hero {
+    align-items: flex-end;
+}
+
+.qr-code {
+    margin: 5px;
+    color: var(--primary);
+    background-color: var(--primary);
+}
+
+div.qr-code {
+    margin-top: 0;
+} */
+
+.hero-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* .qr-code-section {
+    margin-bottom: 16rem;
+    padding: 0.5rem;
+} */
+
+.hero-text-section {
+    margin-left: 2rem;
+    padding: 0.5rem;
+}
+
+.hero-text {
+    font-size: 50px;
+    font-family: var(--hero-font);
+    color: var(--hero-font);
+    font-weight: bold;
+}
+
+p .bg-color-text {
+    background-color: var(--bg-color);
+}
+
+@media screen and (max-width: 480px) {
+ .hero-highlight {
+     font-size: 30px;
+ }
+
+ .hero-text {
+     font-size: 30px;
+ }
+
+ .hero {
+     max-width: 100%;
+ }
 }

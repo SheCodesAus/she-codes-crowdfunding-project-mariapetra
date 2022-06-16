@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from '../images/final-logo-jpg-white-text.jpg';
 
 
+
 //icons
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
@@ -24,7 +25,6 @@ function Nav() {
         <nav className="navBar">
         <img className="logo" src={Logo}></img>
             
-            <section>
                 <button onClick={handleToggle}>
                     {navbarOpen ? (
                     <MdClose 
@@ -55,8 +55,7 @@ function Nav() {
                         Login
                     </Link>
             </ul>   
-            </section>
-              
+       
         </nav>
 
    

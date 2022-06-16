@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import HeroCarousel from "../components/Hero/HeroHome";
 
 //styles
 import "./HomePage.css";
@@ -28,11 +27,7 @@ function HomePage() {
   if (!projectList) return <p>Loading projects...</p>;
 
   return (
-  <>
-  <div>
-  <HeroCarousel />
-  </div>
-    
+  <>   
     <div id="project-list">
       
     <div className="projects-box">
@@ -44,7 +39,7 @@ function HomePage() {
     </div>
   </>
     );
-  }
+  } 
  
     
   

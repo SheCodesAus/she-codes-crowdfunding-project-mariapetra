@@ -12,18 +12,23 @@ import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import LoginPage from "./pages/LoginPage";
 
+//components 
+import HeroCarousel from "../src/components/Hero/HeroHome"
+
+
 
 function App() {
   return (
     <Router>
-    <div>
+    <>
       <Nav />
-    <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/project/:id" element={<ProjectPage />} />
-    </Routes>
-    </div>
+      <HeroCarousel />
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/project/:id" element={<ProjectPage />} />
+        </Routes>
+    </>
     </Router>
   );
 }
