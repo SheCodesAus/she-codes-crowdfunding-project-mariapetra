@@ -1,38 +1,51 @@
-.App {
+/* .hero {
+  height: 500px;
+  width: 100%;
+  color: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background: linear-gradient(to top, #3204fdba, #9907facc), url("https://spacecubed.com/wp-content/uploads/2020/06/pssmileproduction_shecodes-115-scaled.jpg") no-repeat center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.hero-highlight {
+  font-family: var(--highlight-text);
+  font-size: 80px;
+  text-shadow:
+    0 0 7px var(--bg-light),
+    0 0 10px var(--light-font),
+    0 0 21px var(--light-font),
+    0 0 42px var(--light-font),
+    0 0 82px var(--dark-font),
+    0 0 92px var(--dark-font),
+    0 0 102px var(--dark-font),
+    0 0 151px var(--dark-font);
+} */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Small devices (landscape phones, 576px and up) */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* @media (max-width: 576px) { */
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* } */
+
+/* Medium devices (tablets, 768px and up)*/
+
+/* @media (max-width: 768px) { */
+  
+
+  /* sidebar Nav */
+
+ 
+/* } */
+
+/* Large devices (desktops, 992px and up) */
+
+/* @media(max-width: 992px){
+
+} */
+
+
+
+
