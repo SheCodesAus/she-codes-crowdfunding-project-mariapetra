@@ -100,13 +100,27 @@ p .bg-color-text {
     background-color: var(--bg-color);
 }
 
+@media screen and (max-width: 750px) {
+    .hero-highlight {
+        font-size: 30px;
+    }
+   
+    p.hero-text {
+        font-size: 30px;
+    }
+   
+    .hero {
+        max-width: 100%;
+    }
+   }
 @media screen and (max-width: 480px) {
  .hero-highlight {
      font-size: 30px;
  }
 
- .hero-text {
-     font-size: 30px;
+ p.hero-text,
+ #text {
+     font-size: 20px;
  }
 
  .hero {
